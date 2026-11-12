@@ -16,8 +16,8 @@ jobs:
         with:
           gradle-version: 9.7.1
       - run: gradle build
+        working-directory: gamble-hub
       - uses: actions/upload-artifact@v4
         with:
           name: gamble-hub-jar
-          path: build/libs/*.jar
-          
+          path: gamble-hub/build/libs/*.jar
